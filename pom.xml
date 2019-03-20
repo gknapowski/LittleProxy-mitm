@@ -1,9 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+		http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.ganskef</groupId>
     <artifactId>littleproxy-mitm</artifactId>
     <packaging>jar</packaging>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.1.1</version>
     <name>LittleProxy - Man-In-The-Middle</name>
     <description>LittleProxy is a high performance HTTP proxy written in Java and using the Netty networking framework.
 
@@ -16,7 +19,7 @@ This is an extension module to enable Man-In-The-Middle impersonation for HTTPS.
         <github.global.server>github</github.global.server>
         <skipTests>false</skipTests>
         <!-- Versions should better be retrieved from a parent module. -->
-        <netty.version>4.0.36.Final</netty.version>
+        <netty.version>4.1.34.Final</netty.version>
         <slf4j.version>1.7.21</slf4j.version>
         <bouncycastle.version>1.51</bouncycastle.version>
         <littleproxy.version>1.1.0</littleproxy.version>
@@ -79,14 +82,14 @@ This is an extension module to enable Man-In-The-Middle impersonation for HTTPS.
             -->
 
             <!--If this fails, you could exclude netty-tcnative: -->
-            <!-- - ->
+          
                 <exclusions>
                 <exclusion>
                 <artifactId>netty-tcnative</artifactId>
                 <groupId>io.netty</groupId>
                 </exclusion>
                 </exclusions>
-                <!- - -->
+          
         </dependency>
 
         <dependency>
@@ -211,7 +214,7 @@ This is an extension module to enable Man-In-The-Middle impersonation for HTTPS.
                 </executions>
             </plugin>
 
-            <plugin>
+<!--             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.10.3</version>
@@ -230,7 +233,7 @@ This is an extension module to enable Man-In-The-Middle impersonation for HTTPS.
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
 
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
